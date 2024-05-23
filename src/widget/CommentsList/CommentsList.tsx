@@ -1,6 +1,6 @@
 import style from './CommentsList.module.scss'
 
-import FormAddComment from '../FormAddComment/FormAddComment'
+import { CommentItem, FormAddComment } from '@/entities/Comment'
 import { IComment } from '@/app/types/post.interface'
 
 type TypeProps = {
@@ -22,9 +22,7 @@ const CommentsList: React.FC<TypeProps> = ({ comments }) => {
 			<div className={style.comments__container}>
 				<h3 className={style.title}>Комментарии</h3>
 				{comments.map((comment) => (
-					<p key={comment.id} className={style.comment}>
-						{comment.text}
-					</p>
+					<CommentItem key={comment.id} text={comment.text} id={comment.id} />
 				))}
 				<FormAddComment />
 			</div>

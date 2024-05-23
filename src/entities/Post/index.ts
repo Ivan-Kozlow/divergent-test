@@ -1,7 +1,4 @@
 export { default as Post } from './ui/Post/Post'
 export { default as Header } from './ui/Header/Header'
-export { default as PostHeader } from './ui/PostHeader/PostHeader'
-export { default as PostDescription } from './ui/PostDescription/PostDescription'
-export { default as CommentCount } from './ui/CommentCount/CommentCount'
-export { default as ButtonAddPost } from './ui/ButtonAddPost/ButtonAddPost'
 export { default as FormAddPost } from './ui/FormAddPost/FormAddPost'
+export { default as ButtonAddPost } from './ui/ButtonAddPost/ButtonAddPost'

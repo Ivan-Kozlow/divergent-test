@@ -1,9 +1,11 @@
 import style from './Post.module.scss'
 import { useNavigate } from 'react-router-dom'
 
-import { CommentCount, PostDescription, PostHeader } from '@/entities/Post'
 import { IPost } from '@/app/types/post.interface'
 import PrimaryButton from '@/shared/PrimaryButton/PrimaryButton'
+import PostDescription from '../PostDescription/PostDescription'
+import PostHeader from '../PostHeader/PostHeader'
+import CommentCount from '../CommentCount/CommentCount'
 
 type TypeProps = IPost
 

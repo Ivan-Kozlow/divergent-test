@@ -3,8 +3,8 @@ import { useParams } from 'react-router-dom'
 
 import { useAppSelector } from '@/app/store/store'
 
-import { CommentsList } from '@/entities/Comment'
 import ButtonToBack from '@/shared/ButtonToBack/ButtonToBack'
+import CommentsList from '@/widget/CommentsList/CommentsList'
 
 const PostDetailsScreen: React.FC = () => {
 	const params = useParams()

@@ -9,10 +9,6 @@
 	&:hover {
 		cursor: pointer;
 		background-color: #c9c9c9;
-		box-shadow: inset -2px -3px 0 1px rgba(0, 0, 0, 0.7);
-	}
-
-	&:active {
-		box-shadow: inset -1px -3px 0 1px rgba(0, 0, 0, 0.8);
+		box-shadow: inset -1px -3px 0 1px rgba(0, 0, 0, 0.7);
 	}
 }

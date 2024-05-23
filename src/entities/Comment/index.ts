@@ -1,1 +1,2 @@
-export { default as CommentsList } from './ui/CommentsList/CommentsList'
+export { default as FormAddComment } from './ui/FormAddComment/FormAddComment'
+export { default as CommentItem } from './ui/CommentItem/CommentItem'

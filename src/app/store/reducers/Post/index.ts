@@ -18,12 +18,14 @@ const post = createSlice({
 			const { title, description } = action.payload
 			const newPost: IPost = { id: state.length + 1, title, description, comments: [] }
 			state.push(newPost)
+			toast.success('Пост успешно создан')
 		},
 		addCommentForPost(state, action: PayloadAction<{ postId: number; text: string }>) {
 			const { postId, text } = action.payload
 			const post = state.find((post) => post.id === postId)
 			if (post) {
 				post.comments.push({ id: post.comments.length + 1, text })
+				toast.success('Комментарий успешно создан')
 			} else {
 				toast.error('Пост не найден')
 			}
