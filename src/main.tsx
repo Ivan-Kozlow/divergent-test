@@ -1,4 +1,5 @@
 import './main.css'
+import 'react-toastify/dist/ReactToastify.css'
 import { ToastContainer } from 'react-toastify'
 import { RouterProvider } from 'react-router-dom'
 import { Provider } from 'react-redux'
@@ -13,8 +14,8 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
 		<RouterProvider router={router} />
 		<ToastContainer
 			limit={4}
-			position='top-right'
-			hideProgressBar
+			position='bottom-right'
+			theme='light'
 			newestOnTop
 			closeOnClick={false}
 			draggable={false}
