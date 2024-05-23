@@ -1,0 +1,28 @@
+.link {
+	padding: 10px 10px;
+	background-color: #555;
+	max-width: 120px;
+	border-radius: 5px;
+	text-align: center;
+	position: relative;
+	color: white;
+
+	&::after,
+	&::before {
+		content: '';
+		display: block;
+		width: 12px;
+		height: 4px;
+		background-color: whitesmoke;
+		position: absolute;
+		top: 32%;
+		left: 10px;
+		border-radius: 2px;
+		transform: rotate(-45deg);
+	}
+
+	&::before {
+		top: 54%;
+		transform: rotate(45deg);
+	}
+}

@@ -1,0 +1,16 @@
+.container {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+	background-color: rgba(212, 212, 212, 0.4);
+	min-width: 280px;
+	border-radius: 8px;
+	padding: 20px 15px;
+	color: #fff;
+
+	.bottom__container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+}

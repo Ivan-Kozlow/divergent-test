@@ -1,0 +1,8 @@
+$maxLines: 3;
+$lineHeight: 1.5;
+
+.description {
+	max-height: calc($maxLines * $lineHeight);
+	text-overflow: ellipsis;
+	overflow: hidden;
+}

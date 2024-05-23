@@ -1,0 +1,21 @@
+.header {
+	font-size: 23px;
+	font-weight: 600;
+	text-align: center;
+	color: #333;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	padding: 40px 10px;
+	background-color: #fff;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+	position: fixed;
+	width: 100%;
+	height: max-content;
+	top: 0;
+	left: 0;
+
+	& + * {
+		padding-top: 105px;
+	}
+}
