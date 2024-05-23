@@ -15,7 +15,6 @@ const post = createSlice({
 	initialState,
 	reducers: {
 		createPost(state, action: PayloadAction<IActionPayloadCreatePost>) {
-			// FIXME добавить логику добавления результирующей последней строки
 			const { title, description } = action.payload
 			const newPost: IPost = { id: state.length + 1, title, description, comments: [] }
 			state.push(newPost)

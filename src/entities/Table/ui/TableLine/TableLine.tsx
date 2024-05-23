@@ -1,4 +1,4 @@
-import style from './TableLines.module.scss'
+import style from './TableLine.module.scss'
 
 import { IPost } from '@/app/types/post.interface'
 
@@ -8,7 +8,7 @@ type TypeProps = {
 	countComments: number
 }
 
-const TableLines: React.FC<TypeProps> = ({ countComments, countSymbols, title }) => {
+const TableLine: React.FC<TypeProps> = ({ countComments, countSymbols, title }) => {
 	return (
 		<div className={style.container}>
 			<div className={style.column}>{title}</div>
@@ -18,4 +18,4 @@ const TableLines: React.FC<TypeProps> = ({ countComments, countSymbols, title })
 	)
 }
 
-export default TableLines
+export default TableLine

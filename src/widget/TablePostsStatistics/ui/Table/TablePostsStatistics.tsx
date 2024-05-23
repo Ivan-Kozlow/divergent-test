@@ -2,7 +2,7 @@ import style from './Table.module.scss'
 
 import { useAppSelector } from '@/app/store/store'
 
-import { TableLines } from '@/entities/Table'
+import { TableLine } from '@/entities/Table'
 
 const TablePostsStatistics: React.FC = () => {
 	const posts = useAppSelector((state) => state.post)
@@ -10,13 +10,16 @@ const TablePostsStatistics: React.FC = () => {
 	return (
 		<div className={style.container}>
 			{posts.map((post) => (
-				<TableLines
+				<TableLine
 					key={post.id}
 					title={post.title}
 					countSymbols={post.description.length}
 					countComments={post.comments.length}
 				/>
 			))}
+			<div className={style.last__line}>
+				<TableLine title='Всего постов' countSymbols={posts.length} countComments={posts.length} />
+			</div>
 		</div>
 	)
 }

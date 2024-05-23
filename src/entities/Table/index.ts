@@ -1,1 +1,1 @@
-export { default as TableLines } from './ui/TableLines/TableLines'
+export { default as TableLine } from './ui/TableLine/TableLine'
