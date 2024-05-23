@@ -11,6 +11,7 @@ const TablePostsStatistics: React.FC = () => {
 		<div className={style.container}>
 			{posts.map((post) => (
 				<TableLines
+					key={post.id}
 					title={post.title}
 					countSymbols={post.description.length}
 					countComments={post.comments.length}

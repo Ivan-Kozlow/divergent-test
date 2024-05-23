@@ -1,5 +1,6 @@
 import style from './CommentsList.module.scss'
 
+import FormAddComment from '../FormAddComment/FormAddComment'
 import { IComment } from '@/app/types/post.interface'
 
 type TypeProps = {
@@ -12,6 +13,7 @@ const CommentsList: React.FC<TypeProps> = ({ comments }) => {
 			<div className={style.comments__container}>
 				<span className={style.title}>Комментарии</span>
 				<span className={style.none__comments}>Пока что пусто</span>
+				<FormAddComment />
 			</div>
 		)
 
@@ -24,6 +26,7 @@ const CommentsList: React.FC<TypeProps> = ({ comments }) => {
 						{comment.text}
 					</p>
 				))}
+				<FormAddComment />
 			</div>
 		</div>
 	)

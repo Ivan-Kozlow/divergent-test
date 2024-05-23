@@ -1,22 +1,23 @@
 import style from './FormAddPost.module.scss'
 import { useReducer } from 'react'
 
-import { INPUTS_ADD_POST, TypeInputsName } from './consts'
+import { INPUTS_ADD_POST, TypeInputsName, defaultFormReducerState } from './consts'
 import { useAppDispatch } from '@/app/store/store'
 import { postActions } from '@/app/store/reducers/Post'
 
-import { reducer } from './reducer'
+import { actionCreatorChangeInput, actionCreatorReset, reducer } from './reducer'
 
 const FormAddPost: React.FC = () => {
-	const dispatchState = useAppDispatch()
-	const [state, dispatch] = useReducer(reducer, { title: '', description: '' })
+	const dispatchStore = useAppDispatch()
+	const [state, dispatch] = useReducer(reducer, defaultFormReducerState)
 
 	const handleCreatePost = () => {
-		dispatchState(postActions.createPost(state))
+		dispatch(actionCreatorReset())
+		dispatchStore(postActions.createPost(state))
 	}
 
 	const changeInput = (e: React.ChangeEvent<HTMLInputElement>) => {
-		dispatch({ type: e.target.name as TypeInputsName, payload: e.target.value })
+		dispatch(actionCreatorChangeInput(e.target.name as TypeInputsName, e.target.value))
 	}
 
 	return (
@@ -24,6 +25,8 @@ const FormAddPost: React.FC = () => {
 			<div className={style.inputs}>
 				{INPUTS_ADD_POST.map(({ placeholder, name }) => (
 					<input
+						key={name}
+						value={state[name]}
 						className={style.input}
 						type='text'
 						name={name}

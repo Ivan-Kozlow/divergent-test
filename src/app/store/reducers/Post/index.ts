@@ -26,7 +26,7 @@ const post = createSlice({
 			if (post) {
 				post.comments.push({ id: post.comments.length + 1, text })
 			} else {
-				toast.error('Пост не найден', {})
+				toast.error('Пост не найден')
 			}
 		},
 	},

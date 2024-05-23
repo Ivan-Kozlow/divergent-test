@@ -5,12 +5,17 @@ interface IState {
 	description: string
 }
 interface IAction {
-	type: TypeInputsName
+	type: TypeInputsName | 'reset'
 	payload: string
 }
 
 export const reducer = (state: IState, action: IAction) => {
 	switch (action.type) {
+		case 'reset':
+			return {
+				description: '',
+				title: '',
+			}
 		case 'title':
 			return {
 				...state,
@@ -25,3 +30,9 @@ export const reducer = (state: IState, action: IAction) => {
 			return state
 	}
 }
+
+export const actionCreatorReset = (): IAction => ({ type: 'reset', payload: '' })
+export const actionCreatorChangeInput = (inputName: TypeInputsName, text: string): IAction => ({
+	type: inputName,
+	payload: text,
+})
